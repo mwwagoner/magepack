@@ -3,7 +3,8 @@
 body {
   background-color: lightblue;
   text-align: center;
-  font-family: 'Play', sans-serif;
+  /* font-family: 'Play', sans-serif; */
+  font-family: 'Architects Daughter', cursive;
 
 }
 .App h1 {
@@ -12,7 +13,8 @@ body {
 }
 
 .App p {
-  font-style: italic;
+  font-family: 'Corinthia', cursive;
+  font-size: 3em;
 }
 
 .App img {
