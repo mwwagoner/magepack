@@ -1,6 +1,10 @@
+@import './fonts.css';
+
 body {
   background-color: lightblue;
   text-align: center;
+  font-family: 'Play', sans-serif;
+
 }
 .App h1 {
   font-size: 8em;
@@ -9,4 +13,8 @@ body {
 
 .App p {
   font-style: italic;
+}
+
+.App img {
+  width: 4em;
 }
