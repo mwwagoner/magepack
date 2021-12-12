@@ -1,12 +1,12 @@
 import React from "react";
 
-const PacksList = ({ packs }) => {
+const PacksList = ({ packInfo }) => {
     return (
         <>
             <h1>Packs</h1>
-            {packs.map((pack, key) => {
+            {packInfo.map((pack, key) => {
                 return (
-                    <h3>{pack.owner}</h3>
+                    <h3>{pack.owner}'s pack</h3>
                 )
             })}
         </>
