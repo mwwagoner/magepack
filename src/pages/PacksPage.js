@@ -4,16 +4,17 @@ import PacksList from "../components/PacksList";
 
 const PacksPage = () => {
 
-    const [packInfo, setPackInfo] = useState({ owner: '', contents: []});
+    const [packInfo, setPackInfo] = useState({ owner: 'John Doe', contents: ['A piece of string']});
 
     useEffect(() => {
         const fetchData = async () => {
             const result = await fetch(`/api/packs/list`);
             const body = await result.json();
+            
             setPackInfo(body);
         }
         fetchData();
-    });
+    }, []);
 
     return(
         <>
