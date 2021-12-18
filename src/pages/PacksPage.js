@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from "react";
 import PacksList from "../components/PacksList";
-
+import axios from "axios";
 
 const PacksPage = () => {
 
-    const [packInfo, setPackInfo] = useState({ owner: 'John Doe', contents: ['A piece of string']});
+    const [packInfo, setPackInfo] = useState();
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await fetch(`/api/packs/list`);
-            const body = await result.json();
+        axios('/api/packs/owners-list')
+            .then(response => {
+                setPackInfo(response.data)
+            })
+        // const fetchData = async () => {
+        //     const result = await fetch(`/api/packs/owners-list`);
+        //     const body = await result.json();
             
-            setPackInfo(body);
-        }
-        fetchData();
+        //     setPackInfo(body);
+        // }
+        // fetchData();
     }, []);
+
+    // console.log(packInfo[0]);
 
     return(
         <>
