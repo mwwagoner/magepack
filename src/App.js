@@ -7,7 +7,6 @@ import {
 import HomePage from './pages/HomePage';
 import PacksPage from './pages/PacksPage';
 
-
 function App() {
   return (
     <Router>
