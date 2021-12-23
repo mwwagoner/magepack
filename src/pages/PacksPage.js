@@ -4,23 +4,14 @@ import axios from "axios";
 
 const PacksPage = () => {
 
-    const [packInfo, setPackInfo] = useState();
+    const [packInfo, setPackInfo] = useState([]);
 
-    useEffect(() => {
-        axios('/api/packs/owners-list')
-            .then(response => {
-                setPackInfo(response.data)
+    useEffect((packInfo) => {
+        axios.get('/packs')
+            .then(res => {
+                setPackInfo(res.data)
             })
-        // const fetchData = async () => {
-        //     const result = await fetch(`/api/packs/owners-list`);
-        //     const body = await result.json();
-            
-        //     setPackInfo(body);
-        // }
-        // fetchData();
     }, []);
-
-    // console.log(packInfo[0]);
 
     return(
         <>
