@@ -16,7 +16,7 @@ const PacksPage = () => {
     return(
         <>
             <h1>Packs</h1>
-            <PacksList packInfo={ packInfo }/>
+            <PacksList packInfo={ packInfo } />
         </>
     )
 }
